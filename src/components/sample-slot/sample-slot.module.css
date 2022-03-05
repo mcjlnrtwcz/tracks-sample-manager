@@ -1,0 +1,13 @@
+.slot {
+    width: 64px;
+    height: 64px;
+    background-color: lightgray;
+    border: 1px solid gray;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* TODO: not necessarily fitting here */
+    font-size: 12px;
+    user-select: none;
+}
