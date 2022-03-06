@@ -14,7 +14,11 @@
     "extends": "preact",
     "ignorePatterns": [
       "build/"
-    ]
+    ],
+    "rules": {
+      "quotes": ["error", "double"],
+      "semi": ["error", "always"]
+    }
   },
   "devDependencies": {
     "enzyme": "^3.10.0",

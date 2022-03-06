@@ -1,11 +1,11 @@
-import { h } from "preact";
+import Box from "components/box";
 
 import css from "./sample-slot.module.css";
 
-const SampleSlot = ({name}) => (
-  <div class={css.slot}>
+const SampleSlot = ({ name }) => (
+  <Box customClass={css.slot}>
     {name}
-  </div>
+  </Box>
 );
 
 export default SampleSlot;

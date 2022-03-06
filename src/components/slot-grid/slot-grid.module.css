@@ -1,8 +1,20 @@
 .grid {
+    padding: 16px;
+}
+
+.pageButton {
+    width: 64px;
+}
+
+.nextButton {
+    margin-right: 16px;
+}
+
+.contents {
+    margin-top: 16px;
     display: grid;
     grid-template-columns: repeat(8, 64px);
     gap: 16px;
     justify-content: start;
     align-content: start;
-    padding: 16px;
 }

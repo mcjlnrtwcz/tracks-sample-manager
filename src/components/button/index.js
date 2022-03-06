@@ -1,0 +1,13 @@
+import Box from "components/box";
+
+import css from "./button.module.css";
+
+const Button = ({ children, customClass, onClick, disabled }) => (
+    <button class={`${css.buttonWrapper} ${customClass}`.trim()} onClick={onClick} disabled={disabled}>
+        <Box customClass={css.button}>
+            {children}
+        </Box>
+    </button>
+);
+
+export default Button;

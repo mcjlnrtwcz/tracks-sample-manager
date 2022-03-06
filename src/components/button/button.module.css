@@ -1,0 +1,15 @@
+.buttonWrapper {
+    border: unset;
+    background: unset;
+    padding: unset;
+    margin: unset;
+}
+
+.buttonWrapper:hover:enabled .button {
+    background-color: whitesmoke;
+}
+
+.buttonWrapper:active:enabled .button {
+    background-color: gray;
+    color: white;
+}

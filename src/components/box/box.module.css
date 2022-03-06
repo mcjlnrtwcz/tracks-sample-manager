@@ -1,0 +1,9 @@
+.box {
+    background-color: lightgray;
+    border: 1px solid gray;
+    border-radius: 4px;
+    user-select: none;
+    padding: 8px;
+    /* TODO: not necessarily fitting here */
+    font-size: 12px;
+}
