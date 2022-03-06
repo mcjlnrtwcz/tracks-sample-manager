@@ -3,7 +3,7 @@
 }
 
 .pageButton {
-    width: 64px;
+    width: 96px;
 }
 
 .nextButton {
@@ -13,7 +13,7 @@
 .contents {
     margin-top: 16px;
     display: grid;
-    grid-template-columns: repeat(8, 64px);
+    grid-template-columns: repeat(8, 96px);
     gap: 16px;
     justify-content: start;
     align-content: start;

@@ -2,9 +2,13 @@ import Box from "components/box";
 
 import css from "./sample-slot.module.css";
 
-const SampleSlot = ({ name }) => (
+const SampleSlot = ({ name, onUpdate }) => (
   <Box customClass={css.slot}>
     {name}
+    <label class={css.selectFile}>
+      <input type="file" onChange={(event) => onUpdate(event.target.files)} />
+      <Box>📂</Box>
+    </label>
   </Box>
 );
 
