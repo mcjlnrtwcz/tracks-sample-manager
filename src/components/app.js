@@ -1,4 +1,5 @@
 import { useState } from "preact/hooks";
+import JSZip from "jszip";
 
 import SlotGrid from "./slot-grid";
 import SampleSlot from "./sample-slot";
@@ -29,12 +30,25 @@ function App() {
     const { createFFmpeg } = window.FFmpeg;
     const ffmpeg = await createFFmpeg({ log: true, corePath: "/assets/ffmpeg/ffmpeg-core.js", });
     await ffmpeg.load();
-    const inputFileBuffer = await samples[0][0].arrayBuffer();
-    const inputFileView = new Uint8Array(inputFileBuffer);
-    await ffmpeg.FS("writeFile", "test.wav", inputFileView);
-    await ffmpeg.run("-i", "test.wav", "test.ogg");
-    const convertedFileView = await ffmpeg.FS("readFile", "test.ogg");
-    downloadBlob(new Blob([convertedFileView.buffer], { type: "application/ogg" }), "test.ogg");
+
+    let zip = new JSZip();
+
+    for (let index = 0; index < samples.length; index++) {
+      const sample = samples[index];
+      if (!sample) continue;
+      const file = sample[0];
+      const inputFileBuffer = await file.arrayBuffer();
+      const inputFileView = new Uint8Array(inputFileBuffer);
+      await ffmpeg.FS("writeFile", file.name, inputFileView);
+      const outputFilename = `${index}-output.wav`;
+      await ffmpeg.run("-i", file.name, outputFilename);
+      const convertedFileView = await ffmpeg.FS("readFile", outputFilename);
+      const blob = new Blob([convertedFileView.buffer], { type: "audio/wav" });
+      zip.file(outputFilename, blob);
+    }
+
+    const result = await zip.generateAsync({ type: "blob" });
+    downloadBlob(result, "converted.zip");
   }
 
   return (
