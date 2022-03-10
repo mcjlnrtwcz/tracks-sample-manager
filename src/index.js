@@ -1,4 +1,7 @@
-import "./style";
+import { h, Fragment, render } from "preact";
+
 import App from "./components/app";
 
-export default App;
+import "./style";
+
+render(<App />, document.getElementById("root"));

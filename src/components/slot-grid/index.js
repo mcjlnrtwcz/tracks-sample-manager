@@ -1,6 +1,7 @@
+import { h, Fragment } from 'preact'
 import { useState } from "preact/hooks";
 
-import Button from "components/button";
+import Button from "../button";
 
 import css from "./slot-grid.module.css";
 
@@ -10,7 +11,7 @@ function SlotGrid({ children }) {
   const [page, setPage] = useState(0);
 
   return (
-    <div class={css.grid}>
+    <div>
       {/* For sake of simplicity it's assumed that there only two pages */}
       <Button
         onClick={() => setPage(1)}

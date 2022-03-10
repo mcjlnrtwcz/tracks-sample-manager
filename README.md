@@ -5,6 +5,8 @@ The purpose of this project is to provide an easy way to prepare samples for Nov
 **Planned features:**
 * drag'n'drop samples into slots on the grid from your drive,
 * (optionally) move samples around and preview them,
+* save and load intermediate state (e.g. in case of failure during the process),
+* (optionally) warn about stereo files,
 * convert audio files to format used by Tracks,
 * name files in regard to their position on the grid and generate a `.zip` file than be unpacked onto the SD card manually.
 
@@ -16,13 +18,13 @@ The purpose of this project is to provide an easy way to prepare samples for Nov
 # install dependencies
 npm install
 
-# serve with hot reload at localhost:8080
+# build for development (with watch)
 npm run dev
 
 # build for production with minification
 npm run build
 
-# test the production build locally
+# serve at localhost:8080 (run along with `dev`)
 npm run serve
 
 # run tests with jest and enzyme

@@ -1,3 +1,5 @@
+import { h, Fragment } from 'preact'
+
 import css from "./box.module.css";
 
 const Box = ({ children, customClass }) => (

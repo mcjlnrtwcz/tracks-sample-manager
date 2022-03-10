@@ -15,6 +15,7 @@ html, body {
 	box-sizing: border-box;
 }
 
-#app {
+#root {
 	height: 100%;
+	padding: 16px;
 }
