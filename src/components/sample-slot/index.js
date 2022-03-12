@@ -1,14 +1,15 @@
-import { h, Fragment } from 'preact'
+import { h, Fragment } from "preact";
 
 import Box from "../box";
 
 import css from "./sample-slot.module.css";
 
-const SampleSlot = ({ name, onUpdate }) => (
+const SampleSlot = ({ index, name, onUpdate }) => (
   <Box customClass={css.slot}>
+    <span class={css.index}>{String(index).padStart(2, "0")}</span>
     {name}
     <label class={css.selectFile}>
-      <input type="file" onChange={(event) => onUpdate(event.target.files)} />
+      <input type="file" onChange={(event) => onUpdate(event.target.files[0])} />
       <Box>📂</Box>
     </label>
   </Box>

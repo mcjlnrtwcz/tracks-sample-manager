@@ -1,4 +1,4 @@
-import { h, Fragment } from 'preact'
+import { h, Fragment } from "preact";
 
 import Box from "../box";
 
