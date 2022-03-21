@@ -1,4 +1,3 @@
-import { h, Fragment } from "preact";
 import { useState } from "preact/hooks";
 import JSZip from "jszip";
 
@@ -10,7 +9,7 @@ import downloadBlob from "../utils/download-blob";
 import css from "./app.module.css";
 
 // TODO: this path should be set in some configuration file on env variable?
-const FFMPEG_PATH = "/assets/ffmpeg/ffmpeg-core.js";
+const FFMPEG_PATH = "/external/ffmpeg/ffmpeg-core.js";
 const DEFAULT_SAMPLE = { name: "Empty", file: null };
 const DEFAULT_SAMPLES = new Array(64).fill(DEFAULT_SAMPLE);
 

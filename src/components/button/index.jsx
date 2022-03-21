@@ -1,5 +1,3 @@
-import { h, Fragment } from "preact";
-
 import Box from "../box";
 
 import css from "./button.module.css";
