@@ -1,4 +1,4 @@
-import { h, Fragment, render } from "preact";
+import { render } from "preact";
 
 import App from "./components/app";
 

@@ -9,6 +9,7 @@
 .contents {
     margin-top: 16px;
     display: grid;
+    width: fit-content;
     grid-template-columns: repeat(8, 96px);
     gap: 16px;
     justify-content: start;

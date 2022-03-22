@@ -16,11 +16,7 @@ exports.options = {
   jsxFragment: "Fragment",
   target: ["es2020"],
   plugins: [
-    cssModulesPlugin({
-      inject: false,
-      localsConvention: "camelCaseOnly",
-      v2: true,
-    }),
+    cssModulesPlugin({ v2: false }),
     htmlPlugin({
       files: [
         {
