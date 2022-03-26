@@ -1,12 +1,15 @@
 {
   "private": true,
   "name": "tracks-sample-manager",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT",
+  "homepage": "https://mcjlnrtwcz.github.io/tracks-sample-manager",
   "scripts": {
     "build": "node scripts/build.js",
     "dev": "node scripts/dev.js",
-    "lint": "eslint --fix src"
+    "lint": "eslint --fix src",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "preact",
@@ -37,6 +40,7 @@
     "eslint": "^6.0.1",
     "eslint-config-preact": "^1.1.0",
     "finalhandler": "^1.1.2",
+    "gh-pages": "^3.2.3",
     "jest": "^27.5.1",
     "serve-static": "^1.14.2"
   },

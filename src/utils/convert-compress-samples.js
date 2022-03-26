@@ -1,11 +1,11 @@
 import JSZip from "jszip";
 
 // TODO: this path should be set in some configuration file on env variable?
-const FFMPEG_PATH = "/ffmpeg/ffmpeg-core.js";
+// const FFMPEG_PATH = "ffmpeg/ffmpeg-core.js";
 
 export default async function convertCompressSamples(samples) {
   const { createFFmpeg } = window.FFmpeg;
-  const ffmpeg = await createFFmpeg({ log: true, corePath: FFMPEG_PATH });
+  const ffmpeg = await createFFmpeg({ log: true });
   await ffmpeg.load();
 
   let zip = new JSZip();
