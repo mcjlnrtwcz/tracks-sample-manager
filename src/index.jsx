@@ -2,6 +2,6 @@ import { render } from "preact";
 
 import App from "./components/app";
 
-import "./style";
+import "./index.css";
 
 render(<App />, document.getElementById("root"));

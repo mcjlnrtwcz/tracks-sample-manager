@@ -32,6 +32,10 @@ function App() {
   return (
     <>
       {loading && <div class={css.spinner} />}
+      <header class={css.header}>
+        <h1>circuit tracks</h1>
+        <h2>sample manager</h2>
+      </header>
       <div class={css.app}>
         <SlotGrid>
           {samples.map((sample, index) =>
@@ -43,7 +47,7 @@ function App() {
             />)
           }
         </SlotGrid>
-        {/* TODO: this should disable all the inputs */}
+        {/* TODO: disable when there are no samples selected */}
         <Button customClass={css.button} onClick={handleDownload}>
           {loading ? "..." : "Download"}
         </Button>

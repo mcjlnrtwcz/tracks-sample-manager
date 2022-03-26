@@ -30,6 +30,7 @@ exports.options = {
                   <meta charset="UTF-8">
                   <meta name="viewport" content="width=device-width, initial-scale=1.0">
                   <script src="ffmpeg/ffmpeg.min.js"></script>
+                  <link rel="stylesheet" href="fonts/inter.css">
               </head>
               <body>
                   <div id="root" />
@@ -50,6 +51,11 @@ exports.options = {
         {
           from: ["./node_modules/@ffmpeg/core/dist/**/*"],
           to: ["./ffmpeg"],
+          keepStructure: true,
+        },
+        {
+          from: ["./src/fonts/**/*"],
+          to: ["./fonts"],
           keepStructure: true,
         },
       ],

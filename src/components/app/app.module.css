@@ -28,6 +28,21 @@
     to { transform: rotate(360deg); }
 }
 
+.header h1, .header h2 {
+    font-weight: 300;
+    margin: 0;
+}
+
+.header h1 {
+    font-size: 64px;
+    letter-spacing: -4px;
+}
+
+.header h2 {
+    font-size: 36px;
+    letter-spacing: -2px;
+}
+
 .app {
     width: fit-content;
 }

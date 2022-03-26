@@ -4,8 +4,9 @@ html, body {
 	padding: 0;
 	margin: 0;
 	background: #FAFAFA;
-	font-family: sans-serif;
-	font-weight: 400;
+	font-family: "Inter", sans-serif;
+	font-weight: 300;
+	font-feature-settings: "zero", "ss01", "ss02", "case", "calt", "tnum";
 	color: #444;
 }
 
@@ -18,4 +19,5 @@ html, body {
 	display: flex;
     align-items: center;
     justify-content: center;
+	flex-direction: column;
 }
