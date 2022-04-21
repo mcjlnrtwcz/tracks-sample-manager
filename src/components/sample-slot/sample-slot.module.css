@@ -7,9 +7,13 @@
     flex-direction: column;
 }
 
+.slot:hover {
+    background-color: var(--oc-indigo-1);
+}
+
 .index {
-    font-size: 11px;
-    color: gray;
+    font-size: var(--font-s);
+    color: var(--oc-gray-6);
 }
 
 .selectFile > input {

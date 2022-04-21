@@ -1,9 +1,9 @@
 .box {
-    background-color: lightgray;
-    border: 1px solid gray;
-    border-radius: 4px;
+    background-color: var(--oc-indigo-0);
+    border: 1px solid var(--oc-indigo-3);
+    border-radius: var(--unit);
     user-select: none;
-    padding: 8px;
+    padding: calc(2 * var(--unit));
     /* TODO: not necessarily fitting here */
-    font-size: 12px;
+    font-size: var(--font-m);
 }

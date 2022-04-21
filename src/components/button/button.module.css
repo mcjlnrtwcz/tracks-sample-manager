@@ -6,10 +6,9 @@
 }
 
 .buttonWrapper:hover:enabled .button {
-    background-color: whitesmoke;
+    background-color: var(--oc-indigo-1);
 }
 
 .buttonWrapper:active:enabled .button {
-    background-color: gray;
-    color: white;
+    background-color: var(--oc-indigo-2);
 }
